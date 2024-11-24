@@ -1,6 +1,7 @@
 document.getElementById("generate").addEventListener("click", () => {
     console.log("Generate button clicked.");
   
+    // 从当前活动标签页提取内容
     chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
       if (!tabs || tabs.length === 0) {
         alert("No active tab found.");
@@ -32,6 +33,7 @@ document.getElementById("generate").addEventListener("click", () => {
   
             console.log("Extracted page content:", response.content);
   
+            // 调用后台服务生成事件
             chrome.runtime.sendMessage(
               { action: "generateEvent", content: response.content },
               result => {
@@ -48,7 +50,7 @@ document.getElementById("generate").addEventListener("click", () => {
                 }
   
                 if (result.success) {
-                  alert(`Generated Event: ${result.event}`);
+                  displayGeneratedText(result.generatedText); // 显示生成的文本
                 } else {
                   alert(`Error: ${result.error}`);
                 }
@@ -59,4 +61,17 @@ document.getElementById("generate").addEventListener("click", () => {
       );
     });
   });
+  
+  function displayGeneratedText(text) {
+    const eventsContainer = document.getElementById("events");
+    eventsContainer.innerHTML = ""; // 清空之前的内容
+  
+    // 显示生成的文本，支持多段文本
+    const lines = text.split("\n");
+    lines.forEach(line => {
+      const paragraph = document.createElement("p");
+      paragraph.textContent = line;
+      eventsContainer.appendChild(paragraph);
+    });
+  }
   
