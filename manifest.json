@@ -2,20 +2,31 @@
     "manifest_version": 3,
     "name": "Event Generator with ChatGPT",
     "version": "1.0",
-    "description": "Reads web page content and generates calendar events using ChatGPT API.",
+    "description": "Reads web page content and generates calendar events using ChatGPT API and Google Calendar.",
     "permissions": [
       "activeTab",
-      "scripting"
+      "scripting",
+      "identity"
     ],
     "host_permissions": [
       "<all_urls>"
     ],
+    "oauth2": {
+      "client_id": "332826151707-7udv2jer9cpv8h8aaib4g6qdv81nbm5a.apps.googleusercontent.com",
+      "scopes": [
+        "https://www.googleapis.com/auth/calendar.events"
+      ]
+    },
     "background": {
       "service_worker": "background.js"
     },
     "action": {
       "default_popup": "popup.html",
-      "default_icon": "image1.jpg"
+      "default_icon": {
+        "16": "image1.jpg",
+        "48": "image1.jpg",
+        "128": "image1.jpg"
+      }
     },
     "icons": {
       "16": "image1.jpg",
