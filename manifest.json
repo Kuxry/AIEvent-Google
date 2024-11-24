@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Event Generator with ChatGPT",
+    "version": "1.0",
+    "description": "Reads web page content and generates calendar events using ChatGPT API.",
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "image1.jpg"
+    },
+    "icons": {
+      "16": "image1.jpg",
+      "48": "image1.jpg",
+      "128": "image1.jpg"
+    }
+  }
+  
