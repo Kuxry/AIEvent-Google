@@ -2,6 +2,7 @@
     "manifest_version": 3,
     "name": "Event Generator with ChatGPT",
     "version": "1.0",
+
     "description": "Reads web page content and generates calendar events using ChatGPT API and Google Calendar.",
     "permissions": [
       "activeTab",
