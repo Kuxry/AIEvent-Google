@@ -1,10 +1,6 @@
 # AIEvent-Google
 
-以下是为您的插件 **"Event Generator with ChatGPT"** 编写的 `README.md` 文件：
-
----
-
-# **Event Generator with ChatGPT**
+# **Event Generator with AI MOdel**
 
 **Event Generator with ChatGPT** is a Chrome extension that extracts content from web pages, processes the extracted data using ChatGPT, and generates meaningful events that can be added to your Google Calendar.
 
