@@ -13,7 +13,7 @@
       "<all_urls>"
     ],
     "oauth2": {
-      "client_id": "332826151707-7udv2jer9cpv8h8aaib4g6qdv81nbm5a.apps.googleusercontent.com",
+      "client_id": "your-id",
       "scopes": [
         "https://www.googleapis.com/auth/calendar.events"
       ]
