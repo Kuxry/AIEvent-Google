@@ -1,3 +1,4 @@
+![App Workflow](image.gif)
 
 # **Event Generator with AI Model**
 
